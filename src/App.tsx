@@ -1,11 +1,15 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
+import MainLayout from "./components/layouts/main-layout";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/home";
 
 function App() {
   return (
-    <div>
-      <Button>Hello</Button>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+      </Route>
+    </Routes>
   );
 }
 
