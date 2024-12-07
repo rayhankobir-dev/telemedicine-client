@@ -6,7 +6,7 @@ function MainLayout() {
   return (
     <>
       <Navbar />
-      <div className="pt-16 w-full h-screen flex flex-col">
+      <div className="pt-32 lg:pt-16 w-full h-screen flex flex-col">
         <main className="container w-full flex flex-1 gap-4 mx-auto">
           <div className="hidden lg:block min-w-72 w-72">
             <SideNav />
