@@ -32,7 +32,7 @@ const links = [
 
 function SideNav() {
   return (
-    <aside className="h-[80vh] w-full flex flex-col mt-2 py-3 rounded-2xl bg-gray-100 shadow-sm">
+    <aside className="h-[80vh] w-full sticky top-[4.5rem] flex flex-col mt-2 py-3 rounded-2xl bg-gray-100 shadow-sm">
       {links.map((link) => (
         <NavLink
           className={({ isActive }) =>
