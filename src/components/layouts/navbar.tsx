@@ -55,10 +55,10 @@ function Navbar() {
         </form>
 
         <div className="hidden md:flex items-center gap-2">
-          <button className="relative h-11 w-11 flex items-center justify-center text-primary rounded-xl">
-            <ShoppingBag size={25} />
-            <span className="absolute top-0 right-0 w-5 h-5 text-sm flex items-center justify-center bg-primary text-white rounded-full ml-2">
-              0
+          <button className="relative h-11 w-11 flex items-center justify-center text-primary rounded-xl bg-primary/10">
+            <ShoppingBag size={20} />
+            <span className="absolute -top-1.5 -right-1 w-6 h-5 aspect-square text-[12px] flex items-center justify-center bg-primary text-white rounded-full ml-2">
+              20
             </span>
           </button>
 
