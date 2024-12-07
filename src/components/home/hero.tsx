@@ -1,6 +1,7 @@
 import "swiper/css";
+import "swiper/css/effect-fade";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import Banner1 from "@/assets/images/banner/banner-1.webp";
 import Banner2 from "@/assets/images/banner/banner-2.webp";
 import Banner3 from "@/assets/images/banner/banner-3.webp";
@@ -12,8 +13,8 @@ function HeroSection() {
   return (
     <section className="w-full h-fit max-h-[300px]">
       <Swiper
-        slidesPerView={1}
         loop={true}
+        slidesPerView={1}
         centeredSlides={true}
         autoplay={{
           delay: 2500,
@@ -22,13 +23,18 @@ function HeroSection() {
         pagination={{
           clickable: true,
         }}
-        modules={[Autoplay]}
+        effect="fade"
+        modules={[Autoplay, EffectFade]}
         className="hero-slider rounded-xl overflow-hidden"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="">
-            <div className="rounded-xl overflow-hidden">
-              <img className="bg-position-center" src={slide} alt="Banner" />
+            <div className="rounded-xl overflow-hidden bg-primary/10">
+              <img
+                className="min-h-[130px] w-full object-cover object-bottom"
+                src={slide}
+                alt="Banner"
+              />
             </div>
           </SwiperSlide>
         ))}
