@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import ModalClose from "./moda-close";
 
 const Sheet = SheetPrimitive.Root;
 
@@ -64,7 +65,7 @@ const SheetContent = React.forwardRef<
       className,
       children,
       closeButtonClassName = "",
-      closeButton = null,
+      closeButton = <ModalClose />,
       ...props
     },
     ref
@@ -78,8 +79,8 @@ const SheetContent = React.forwardRef<
       >
         <SheetPrimitive.Close
           className={cn(
-            closeButtonClassName,
-            "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+            "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary",
+            closeButtonClassName
           )}
         >
           {closeButton}

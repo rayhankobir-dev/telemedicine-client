@@ -24,7 +24,10 @@ function CartBag() {
           </span>
         </button>
       </SheetTrigger>
-      <SheetContent className="w-full flex flex-col justify-between p-0">
+      <SheetContent
+        closeButtonClassName="absolute right-2 top-2"
+        className="w-full flex flex-col justify-between p-0"
+      >
         <SheetHeader className="p-4 space-y-0">
           <SheetTitle>Shooping Cart</SheetTitle>
           <SheetDescription>
