@@ -1,8 +1,9 @@
-import { Input } from "../ui/input";
+import CartBag from "./cart-bag";
+import { Input } from "../../ui/input";
 import { Link } from "react-router-dom";
+import UserAccount from "./user-account";
 import { AppLogoIcon } from "@/assets/icons";
-import { Search, ShoppingBag } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { ChevronDown, MapPin, Search } from "lucide-react";
 
 function Navbar() {
   return (
@@ -11,7 +12,7 @@ function Navbar() {
         <div className="w-full md:w-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <AppLogoIcon />
-            <span className="hidden md:block font-bold text-2xl text-primary">
+            <span className="hidden md:block lg:hidden xl:block font-bold text-2xl text-primary">
               MedInfo
             </span>
           </Link>
@@ -21,6 +22,11 @@ function Navbar() {
             <CartBag />
           </div>
         </div>
+
+        <button className="max-w-xs h-12 hidden lg:flex items-center gap-1.5 px-2.5 font-medium text-sm xl:text-base text-nowrap hover:bg-primary/10 border border-transparent hover:border-primary/20 rounded-xl duration-200">
+          <MapPin size={20} /> Delivery to Choose Location
+          <ChevronDown size={20} />
+        </button>
 
         <form
           className="h-12 w-full md:max-w-xl flex items-center rounded-xl overflow-hidden border border-transparent focus-within:border-primary duration-200"
@@ -42,35 +48,6 @@ function Navbar() {
         </div>
       </nav>
     </header>
-  );
-}
-
-function CartBag() {
-  return (
-    <button className="relative h-11 w-11 flex items-center justify-center text-primary rounded-xl bg-primary/10">
-      <ShoppingBag size={20} />
-      <span className="absolute -top-1.5 -right-1 w-6 h-5 aspect-square text-[12px] flex items-center justify-center bg-primary text-white rounded-full ml-2">
-        20
-      </span>
-    </button>
-  );
-}
-
-function UserAccount() {
-  return (
-    <button className="flex items-center gap-2 py-1 px-1.5 md:py-1 md:px-1.5 hover:bg-primary/10 border hover:border-primary/30 rounded-xl duration-200">
-      <Avatar className="w-9 h-9">
-        <AvatarFallback className="bg-primary/20 text-primary">
-          AA
-        </AvatarFallback>
-        <AvatarImage src="https://github.com/shadcn.png" />
-      </Avatar>
-
-      <div className="flex flex-col items-start text-xs md:text-sm text-nowrap">
-        <p className="tracking-tighter">Hi, User</p>
-        <p className="font-medium tracking-tighter">Accounts & Orders</p>
-      </div>
-    </button>
   );
 }
 
