@@ -1,9 +1,9 @@
 import CartBag from "./cart-bag";
-import { Search } from "lucide-react";
 import { Input } from "../../ui/input";
 import { Link } from "react-router-dom";
 import UserAccount from "./user-account";
 import { AppLogoIcon } from "@/assets/icons";
+import { ChevronDown, MapPin, Search } from "lucide-react";
 
 function Navbar() {
   return (
@@ -12,7 +12,7 @@ function Navbar() {
         <div className="w-full md:w-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <AppLogoIcon />
-            <span className="hidden md:block font-bold text-2xl text-primary">
+            <span className="hidden md:block lg:hidden xl:block font-bold text-2xl text-primary">
               MedInfo
             </span>
           </Link>
@@ -22,6 +22,11 @@ function Navbar() {
             <CartBag />
           </div>
         </div>
+
+        <button className="max-w-xs h-12 hidden lg:flex items-center gap-1.5 px-2.5 font-medium text-sm xl:text-base text-nowrap hover:bg-primary/10 border border-transparent hover:border-primary/20 rounded-xl duration-200">
+          <MapPin size={20} /> Delivery to Choose Location
+          <ChevronDown size={20} />
+        </button>
 
         <form
           className="h-12 w-full md:max-w-xl flex items-center rounded-xl overflow-hidden border border-transparent focus-within:border-primary duration-200"
