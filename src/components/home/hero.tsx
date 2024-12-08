@@ -1,6 +1,6 @@
 import "swiper/css";
 import "swiper/css/effect-fade";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Banner1 from "@/assets/images/banner/banner-1.webp";
 import Banner2 from "@/assets/images/banner/banner-2.webp";
@@ -23,8 +23,7 @@ function HeroSection() {
         pagination={{
           clickable: true,
         }}
-        effect="fade"
-        modules={[Autoplay, EffectFade]}
+        modules={[Autoplay]}
         className="hero-slider rounded-xl overflow-hidden"
       >
         {slides.map((slide, index) => (

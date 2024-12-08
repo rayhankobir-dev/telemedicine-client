@@ -1,8 +1,9 @@
-import { Input } from "../ui/input";
+import CartBag from "./cart-bag";
+import { Search } from "lucide-react";
+import { Input } from "../../ui/input";
 import { Link } from "react-router-dom";
+import UserAccount from "./user-account";
 import { AppLogoIcon } from "@/assets/icons";
-import { Search, ShoppingBag } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 function Navbar() {
   return (
@@ -42,35 +43,6 @@ function Navbar() {
         </div>
       </nav>
     </header>
-  );
-}
-
-function CartBag() {
-  return (
-    <button className="relative h-11 w-11 flex items-center justify-center text-primary rounded-xl bg-primary/10">
-      <ShoppingBag size={20} />
-      <span className="absolute -top-1.5 -right-1 w-6 h-5 aspect-square text-[12px] flex items-center justify-center bg-primary text-white rounded-full ml-2">
-        20
-      </span>
-    </button>
-  );
-}
-
-function UserAccount() {
-  return (
-    <button className="flex items-center gap-2 py-1 px-1.5 md:py-1 md:px-1.5 hover:bg-primary/10 border hover:border-primary/30 rounded-xl duration-200">
-      <Avatar className="w-9 h-9">
-        <AvatarFallback className="bg-primary/20 text-primary">
-          AA
-        </AvatarFallback>
-        <AvatarImage src="https://github.com/shadcn.png" />
-      </Avatar>
-
-      <div className="flex flex-col items-start text-xs md:text-sm text-nowrap">
-        <p className="tracking-tighter">Hi, User</p>
-        <p className="font-medium tracking-tighter">Accounts & Orders</p>
-      </div>
-    </button>
   );
 }
 
