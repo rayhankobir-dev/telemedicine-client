@@ -1,9 +1,9 @@
 import CartBag from "./cart-bag";
-import { Input } from "../../ui/input";
 import { Link } from "react-router-dom";
 import UserAccount from "./user-account";
 import { AppLogoIcon } from "@/assets/icons";
-import { ChevronDown, MapPin, Search } from "lucide-react";
+import { ChevronDown, MapPin } from "lucide-react";
+import SearchInput from "@/components/search/search-input";
 
 function Navbar() {
   return (
@@ -28,19 +28,7 @@ function Navbar() {
           <ChevronDown size={20} />
         </button>
 
-        <form
-          className="h-12 w-full md:max-w-xl flex items-center rounded-xl overflow-hidden border border-transparent focus-within:border-primary duration-200"
-          action=""
-          method="post"
-        >
-          <Input
-            className="h-full w-full items-center bg-primary/10 border-none shadow-none rounded-none outline-none"
-            placeholder="Search"
-          />
-          <button className="h-full px-3.5 bg-primary text-white">
-            <Search />
-          </button>
-        </form>
+        <SearchInput />
 
         <div className="hidden md:flex items-center gap-3.5">
           <CartBag />
