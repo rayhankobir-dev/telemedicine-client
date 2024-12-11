@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   {
-    label: "OTC Medicine",
+    label: "Medicines",
     icon: PillBottle,
-    to: "/",
+    to: "/medicines",
   },
   {
     label: "Surgical",
