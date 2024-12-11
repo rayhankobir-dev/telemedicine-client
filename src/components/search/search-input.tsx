@@ -10,7 +10,7 @@ function SearchInput() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (keyword) {
-      navigate(`/search/${keyword}`);
+      navigate(`/search?keyword=${keyword}`);
     }
   };
 

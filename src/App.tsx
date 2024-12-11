@@ -5,6 +5,7 @@ import CategoriesPage from "./pages/categories";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/layouts/main-layout";
 import RootLayout from "./components/layouts/root-layour";
+import MedicinesPage from "./pages/medicines";
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="categories" element={<CategoriesPage />} />
+        <Route path="medicines" element={<MedicinesPage />} />
         <Route path="*" element={<div>404</div>} />
       </Route>
       <Route path="/" element={<RootLayout />}>
-        <Route path="search/:keyword" element={<SearchPage />} />
+        <Route path="search" element={<SearchPage />} />
       </Route>
     </Routes>
   );
