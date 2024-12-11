@@ -17,7 +17,7 @@ function App() {
         <Route path="*" element={<div>404</div>} />
       </Route>
       <Route path="/" element={<RootLayout />}>
-        <Route path="search/:keyword" element={<SearchPage />} />
+        <Route path="search" element={<SearchPage />} />
       </Route>
     </Routes>
   );

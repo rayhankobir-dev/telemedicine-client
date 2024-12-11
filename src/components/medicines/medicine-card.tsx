@@ -36,7 +36,7 @@ function MedicineCard({
 
       <div className="max-h-[180px] overflow-hidden">
         <img
-          className="w-full max-w-[200px] mx-auto aspect-square object-cover object-center scale-110 hover:scale-110 transition-all duration-300"
+          className="w-full max-w-[200px] mx-auto aspect-square object-cover object-center scale-110 hover:scale-125 transition-all duration-300"
           src={Napa}
           alt={name}
         />
@@ -44,7 +44,7 @@ function MedicineCard({
 
       <div className="flex-1 flex flex-col justify-between p-3">
         <div>
-          <h1 className="font-semibold text-sm">
+          <h1 className="font-semibold text-sm hover:text-primary">
             {name} ({dosageForm}) <span className="opacity-70">{strength}</span>
           </h1>
           <p className="text-sm opacity-70">{generic}</p>
@@ -54,11 +54,11 @@ function MedicineCard({
         <div className="flex items-end justify-between mt-3">
           <div className="flex flex-col">
             <p className="inline-flex items-center font-light text-sm line-through">
-              ${mrp}
+              ৳{mrp}
             </p>
 
             <p className="inline-flex items-center font-semibold">
-              ${discountedPrice}
+              ৳{discountedPrice}
             </p>
           </div>
 
