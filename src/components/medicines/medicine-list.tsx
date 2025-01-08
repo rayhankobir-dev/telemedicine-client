@@ -25,9 +25,6 @@ function MedicineList({ isTitleShow = true }) {
                 <SelectGroup>
                   <SelectItem value="apple">Price: High to Low</SelectItem>
                   <SelectItem value="banana">Price: Low to High</SelectItem>
-                  <SelectItem value="blueberry">Blueberry</SelectItem>
-                  <SelectItem value="grapes">Grapes</SelectItem>
-                  <SelectItem value="pineapple">Pineapple</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -36,10 +33,7 @@ function MedicineList({ isTitleShow = true }) {
       )}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 px-1">
         {medicines.map((medicine, index) => (
-          <MedicineCard
-            key={index}
-            medicine={medicine}
-          />
+          <MedicineCard key={index} medicine={medicine} />
         ))}
       </div>
     </section>
