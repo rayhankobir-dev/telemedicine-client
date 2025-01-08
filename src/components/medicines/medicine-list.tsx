@@ -38,13 +38,7 @@ function MedicineList({ isTitleShow = true }) {
         {medicines.map((medicine, index) => (
           <MedicineCard
             key={index}
-            name={medicine.name}
-            mrp={medicine.mrp}
-            discount={medicine.discount}
-            generic={medicine.generic}
-            company={medicine.company}
-            strength={medicine.strength}
-            dosageForm={medicine.dosageForm}
+            medicine={medicine}
           />
         ))}
       </div>
