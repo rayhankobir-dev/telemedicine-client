@@ -38,8 +38,8 @@ function CtaSection() {
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="relative flex items-center justify-center">
-              <span className="absolute w-20 h-20 rounded-full bg-primary/50 animate-ping duration-[1500]"></span>
-              <span className="absolute w-24 h-24 rounded-full bg-primary/60 animate- duration-[1500]"></span>
+              <span className="absolute w-20 h-20 rounded-full bg-primary/50 animate-ping duration-700"></span>
+              <span className="absolute w-24 h-24 rounded-full bg-primary/60 animate- duration-700"></span>
               <button className="relative z-10 cursor-pointer w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full">
                 <Play size={28} />
               </button>
